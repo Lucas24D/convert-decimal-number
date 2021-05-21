@@ -44,7 +44,7 @@ const convertToLiteral = (number, lang) => {
 
   divider = setNumber(number);
   res = parseInt(number / divider) * divider;
-  return `${words[res]} and ${convertToLiteral(number % divider, lang)}`;
+  return `${words[res]} ${convertToLiteral(number % divider, lang)}`;
 };
 
 module.exports = convertToLiteral;
